@@ -1,0 +1,25 @@
+<mat-sidenav-container fullscreen autosize>
+    <mat-sidenav #sidenav mode="push" mode="side">
+        <mat-toolbar>
+            <span>Menu</span>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+           </button>
+        </mat-toolbar>
+        <p></p>
+        <mat-nav-list>
+               <a mat-list-item (click)="sidenav.toggle()" ><mat-icon>label</mat-icon><span>Countries list</span></a>
+          </mat-nav-list>
+    </mat-sidenav>
+    <mat-toolbar color="black">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sidenav.toggle()">
+         <mat-icon>menu</mat-icon>
+       </button>
+       <span>Fact Book</span>
+    </mat-toolbar>
+    <mat-drawer-container>
+        <app-country-details></app-country-details>
+    </mat-drawer-container>
+</mat-sidenav-container>
+
+
